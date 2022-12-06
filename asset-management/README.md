@@ -1,10 +1,15 @@
 # webpack
 
-This is a repo with various webpack examples.
+This is a project showing how to manage assets with webpack.
 
 ## How to use
 
--- cd into the project directory and follow instructions on README.md
+```bash
+npm install
+npm run build
+```
+
+_NOTE: `npm run build` will run `npx webpack`_
 
 ## Tips
 
