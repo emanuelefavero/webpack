@@ -4,12 +4,7 @@ This is a boilerplate for a simple **webpack** setup.
 
 ## How to use
 
-```bash
-npm install
-npm run build
-```
-
-_NOTE: `npm run build` will run `npx webpack`_
+-- cd into the project directory and follow instructions on README.md
 
 ## Tips
 
