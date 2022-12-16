@@ -2,7 +2,9 @@
 
 This is a project showing how to manage assets with webpack.
 
-NOTE: Thanks to css-loader and style-loader you can import CSS files with `import './style.css'`. It also allows you to bundle all your CSS into a single file.
+_Thanks to css-loader and style-loader you can import CSS files with `import './style.css'`. It also allows you to bundle all your CSS into a single file._
+
+_We can also install other assets such as images with the same syntax. See the needed configuration file below in the section "**Configuration file**"._
 
 ## How to use
 
@@ -25,6 +27,37 @@ npx webpack --config webpack.config.dev.js
 
 - `npm i webpack webpack-cli --save-dev`
 - `npm i css-loader style-loader --save-dev`
+
+## Configuration file
+
+- `webpack.config.js`
+
+```js
+const path = require('path')
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  mode: 'development',
+  module: {
+    rules: [
+      // Loading CSS
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      // Loading Images
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
+    ],
+  },
+}
+```
 
 ## Resources
 
