@@ -30,6 +30,8 @@ npx webpack --config webpack.config.dev.js
 - `npm i webpack webpack-cli --save-dev`
 - `npm i css-loader style-loader --save-dev`
 
+To load csv files, install `npm i csv-loader --save-dev`
+
 ## Configuration file
 
 - `webpack.config.js`
