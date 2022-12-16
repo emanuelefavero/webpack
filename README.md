@@ -18,6 +18,49 @@ npx webpack --config webpack.config.dev.js
 
 - `npm i webpack webpack-cli --save-dev`
 
+## Configuration files
+
+- `webpack.config.js` - default config file
+
+```js
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  // Remember to change next line to 'production' when you are ready to deploy
+  mode: 'development',
+}
+```
+
+## Watch for changes
+
+To watch for changes, you can either add `watch: true` to the config file:
+
+```js
+module.exports = {
+  watch: true,
+}
+```
+
+Or you can use the `--watch`/`-w` flag:
+
+```bash
+npx webpack --watch
+```
+
+## Tips for creating scripts in package.json
+
+```json
+"scripts": {
+  "build": "webpack",
+  "watch": "webpack --watch"
+}
+```
+
+_NOTE: Call those scripts with `npm run build` and `npm run watch`_
+
 ## Resources
 
 - [Webpack](https://webpack.js.org/)
