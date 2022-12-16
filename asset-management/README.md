@@ -6,6 +6,8 @@ _Thanks to css-loader and style-loader you can import CSS files with `import './
 
 _We can also install other assets such as images with the same syntax. See the needed configuration file below in the section "**Configuration file**"._
 
+_Support for JSON is built-in, so you can import JSON files with `import Data from './data.json'` by default._
+
 ## How to use
 
 ```bash
@@ -53,6 +55,16 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
+      },
+      // Loading Fonts
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+      // Loading Data
+      {
+        test: /\.(csv|tsv)$/i,
+        use: ['csv-loader'],
       },
     ],
   },

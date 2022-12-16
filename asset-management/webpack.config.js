@@ -19,6 +19,16 @@ module.exports = {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
+      // Loading Fonts
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+      // Loading Data
+      {
+        test: /\.(csv|tsv)$/i,
+        use: ['csv-loader'],
+      },
     ],
   },
 }

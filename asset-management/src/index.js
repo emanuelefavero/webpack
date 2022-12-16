@@ -1,6 +1,7 @@
 // NOTE: Thanks to rules in webpack.config.js, we are able to import CSS and images (and other assets) this way.
 import './style.css'
 import RickRollGif from './RickRoll.gif'
+import Data from './data.csv'
 
 function textComponent() {
   const textElement = document.createElement('div')
@@ -23,3 +24,5 @@ function imageComponent() {
 
 document.body.appendChild(textComponent())
 document.body.appendChild(imageComponent())
+
+console.log(Data)
